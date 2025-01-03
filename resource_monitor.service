@@ -1,0 +1,10 @@
+[Unit]
+Description=Resource Usage Monitor
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/monitor_resources.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
