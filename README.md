@@ -8,7 +8,6 @@ This Python script monitors system resource usage (CPU, memory, disk) and integr
 ## Features
 - **Resource Monitoring**: Alerts when CPU, memory, or disk usage exceeds 70%.
 - **Command Handling**: Responds to the `/status` command with detailed system stats.
-- **Group Integration**: Works in group chats, sending updates and receiving commands.
 
 ---
 
@@ -33,15 +32,6 @@ pip install psutil requests
 Replace the placeholders in the script:
 - **BOT_TOKEN**: Your Telegram bot token from BotFather.
 - **CHAT_ID**: The group chat ID where the bot operates.
-
-### **Retrieve Group Chat ID**
-1. Add the bot to your group.
-2. Send a message or command in the group.
-3. Use the following `curl` command to find the group ID:
-   ```bash
-   curl https://api.telegram.org/bot<your_bot_token>/getUpdates
-   ```
-   Look for the `chat.id` field in the response. Group IDs are negative (e.g., `-123456789`).
 
 ---
 
@@ -74,14 +64,6 @@ CPU Usage: 45%
 Memory Usage: 68%
 Disk Usage: 72%
 ```
-
----
-
-## Code Structure
-- **send_telegram_message**: Sends a message to the group.
-- **check_resources**: Monitors system resource usage.
-- **handle_incoming_messages**: Handles incoming messages and commands.
-- **Multithreading**: Ensures both monitoring and command handling run simultaneously.
 
 ---
 
