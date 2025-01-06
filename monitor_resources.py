@@ -48,7 +48,7 @@ def monitor_resources():
         time.sleep(60)
 
 def handle_incoming_messages():
-    url = f"https://api.telegram.com/bot{BOT_TOKEN}/getUpdates"
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/getUpdates"
     last_update_id = None
 
     while True:
